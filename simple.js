@@ -1,7 +1,6 @@
 /* REQUIRING MODULES */
 
-/*
-const events = require('events');
+/*const events = require('events');
 
 let myEmitter = new events.EventEmitter();
 
@@ -14,7 +13,6 @@ myEmitter.emit('someEvent', 'the event was emitted');*/
 /* EMITTING CUSTOM EVENTS */
 
 /*const events = require('events');
-//let util = require('util');
 
 class Person extends events.EventEmitter {
     constructor(name) {
@@ -22,8 +20,6 @@ class Person extends events.EventEmitter {
         this.name = name;
     }
 }
-
-//util.inherits(Person, events.EventEmitter);
 
 let james = new Person('james');
 let mary = new Person('mary');
@@ -37,7 +33,7 @@ people.forEach(function (person) {
     });
 });
 
-james.emit('speak', 'hey dudes');*/
+mary.emit('speak', 'hey dudes');*/
 
 /* READING AND WRITING FILES */
 /* SYNC VARIANT */
@@ -63,20 +59,17 @@ fs.unlink('writeMe.txt', function (err, data) {
 
 /* CREATING AND REMOVING DIRECTORIES */
 /* SYNC VARIANT */
-//const fs = require('fs');
-/*fs.mkdirSync('stuff');
+/*const fs = require('fs');
+fs.mkdirSync('stuff');
 fs.rmdirSync('stuff');*/
 /* ASYNC VARIANT */
-/*fs.mkdir('stuff', function (err, data) {
+/*const fs = require('fs');
+fs.mkdir('stuff', function (err, data) {
     fs.readFile('readMe.txt', 'utf8', function (err, data) {
-        fs.writeFile('./stuff/writeMe.txt', data, function (err, data) {
-            
-        });
+        fs.writeFile('./stuff/writeMe.txt', data, function (err, data) { });
     })
-});*/
+});
 
-/*fs.unlink('./stuff/writeMe.txt', function (err, data) {
-    fs.rmdir('stuff', function (err, data) {
-        
-    });
+fs.unlink('./stuff/writeMe.txt', function (err, data) {
+    fs.rmdir('stuff', function (err, data) { });
 });*/
